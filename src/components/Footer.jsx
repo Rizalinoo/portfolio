@@ -47,7 +47,7 @@ export default function Footer() {
                 {personalInfo.name}
               </div>
               <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-low)' }}>
-                Monochrome Engineering Portfolio
+                IT Portfolio
               </div>
             </div>
           </div>
