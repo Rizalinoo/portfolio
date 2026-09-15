@@ -56,7 +56,7 @@ export const skills = [
       { name: "AWS SigV4 Authentication Protocol", level: "Expert" },
       { name: "Solidity (Smart Contracts & EVM)", level: "Advanced" },
       { name: "Ethers.js (Custodial Blockchain Services)", level: "Expert" },
-      { name: "AES-256 Client-Side Encryption", level: "Expert" },
+      { name: "AES-256 Server-Side Encryption", level: "Expert" },
       { name: "Immutable Integrity Proofs & CIDs", level: "Expert" }
     ]
   },
@@ -124,7 +124,7 @@ export const projects = [
     id: 2,
     title: "ReviewMate: AI & Blockchain Study Platform",
     category: "Systems",
-    description: "An AI-powered, blockchain-secured educational web application designed to automate the creation of study reviewers, flashcards, and quizzes from lecture notes. Utilizes Google Gemini for high-speed NLP content processing, client-side AES-256 encryption, decentralized IPFS storage via Filebase, and a custodial server-side blockchain service using Ethers.js and Solidity smart contracts for immutable academic integrity assurance without requiring student crypto wallets.",
+    description: "An AI-powered, blockchain-secured educational web application designed to automate the creation of study reviewers, flashcards, and quizzes from lecture notes. Utilizes Google Gemini for high-speed NLP content processing, server-side AES-256 encryption, decentralized IPFS storage via Filebase, and a custodial server-side blockchain service using Ethers.js and Solidity smart contracts for immutable academic integrity assurance without requiring student crypto wallets.",
     tags: ["React / Next.js", "Node.js & Express", "MongoDB", "Google Gemini AI", "Filebase (IPFS)", "Solidity", "Ethers.js", "AES-256"],
     metrics: "Sub-10s AI generation • Decentralized IPFS • Custodial Web3 Verification",
     github: "https://github.com",
