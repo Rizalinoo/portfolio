@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal, ArrowUpRight, Sun, Moon } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
+import { BrandLogo } from './BrandLogo';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -64,34 +65,9 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#hero"
-            style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}
+            style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
           >
-            <div
-              style={{
-                width: '34px',
-                height: '34px',
-                borderRadius: '8px',
-                backgroundColor: 'var(--bg-surface-elevated)',
-                border: '1px solid var(--border-medium)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-pure)',
-              }}
-            >
-              <Terminal size={17} />
-            </div>
-            <span
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontWeight: 600,
-                fontSize: '0.95rem',
-                letterSpacing: '-0.02em',
-                color: 'var(--text-pure)',
-              }}
-            >
-              rizalino<span style={{ color: 'var(--text-low)' }}>.dev</span>
-            </span>
+            <BrandLogo size={34} />
           </a>
 
           {/* Desktop Nav Items */}

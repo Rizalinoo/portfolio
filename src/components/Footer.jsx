@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowUp, Terminal } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import { TerminalLogoBadge } from './BrandLogo';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -27,27 +28,13 @@ export default function Footer() {
         >
           {/* Logo & Note */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                backgroundColor: 'var(--bg-surface-elevated)',
-                border: '1px solid var(--border-subtle)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-pure)',
-              }}
-            >
-              <Terminal size={15} />
-            </div>
+            <TerminalLogoBadge size={32} />
             <div>
-              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-pure)' }}>
-                {personalInfo.name}
+              <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-pure)', fontFamily: 'var(--font-mono)' }}>
+                rizalino<span style={{ color: 'var(--text-low)', fontWeight: 500 }}>.dev</span>
               </div>
               <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-low)' }}>
-                IT Portfolio
+                {personalInfo.name}
               </div>
             </div>
           </div>
