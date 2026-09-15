@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FolderGit2, ExternalLink, ArrowUpRight, CheckCircle, X, Activity } from 'lucide-react';
+import { FolderGit2, ExternalLink, ArrowUpRight, X, Activity } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { projects } from '../data/portfolioData';
 
@@ -8,7 +8,8 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const filters = ['All', 'Featured', 'Websites', 'Systems'];
+  const categoryFilters = Array.from(new Set(projects.map((p) => p.category)));
+  const filters = ['All', 'Featured', ...categoryFilters].filter((v, i, a) => a.indexOf(v) === i);
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === 'All') return true;
@@ -25,9 +26,9 @@ export default function Projects() {
             <FolderGit2 size={13} />
             <span>Featured Deliverables</span>
           </div>
-          <h2 className="section-title">Websites & systems built for production.</h2>
+          <h2 className="section-title">Production systems & platforms.</h2>
           <p className="section-subtitle">
-            A showcase of responsive websites, enterprise management portals, and client systems crafted with precision and agentic tooling.
+            A showcase of full-stack platforms, forensic civic technology, and decentralized AI systems built for real-world impact.
           </p>
         </div>
 
@@ -345,6 +346,34 @@ export default function Projects() {
                     {selectedProject.metrics}
                   </div>
                 </div>
+
+                {selectedProject.architecture && selectedProject.architecture.length > 0 && (
+                  <div style={{ marginBottom: '1.5rem' }}>
+                    <div style={{ fontSize: '0.82rem', color: 'var(--text-low)', marginBottom: '0.6rem' }}>
+                      Architecture & Core Modules:
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                      {selectedProject.architecture.map((arch, idx) => (
+                        <div
+                          key={idx}
+                          style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                            border: '1px solid var(--border-subtle)',
+                            borderRadius: '8px',
+                            padding: '0.75rem 0.85rem',
+                          }}
+                        >
+                          <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-pure)', marginBottom: '0.2rem' }}>
+                            {arch.title}
+                          </div>
+                          <div style={{ fontSize: '0.76rem', color: 'var(--text-med)', lineHeight: '1.45' }}>
+                            {arch.desc}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div style={{ marginBottom: '1.75rem' }}>
                   <div style={{ fontSize: '0.82rem', color: 'var(--text-low)', marginBottom: '0.6rem' }}>

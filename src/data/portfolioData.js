@@ -20,7 +20,7 @@ export const skills = [
     category: "Agentic Tools & AI Workflow",
     items: [
       { name: "Gemini Antigravity & IDE", level: "Expert" },
-      { name: "Google Gemini 2.5 API", level: "Expert" },
+      { name: "Google Gemini 2.5 Flash Vision", level: "Expert" },
       { name: "Claude (Sonnet & Artifacts)", level: "Expert" },
       { name: "OpenAI Codex & Models", level: "Expert" },
       { name: "Agentic Pair Programming", level: "Expert" },
@@ -28,47 +28,47 @@ export const skills = [
     ]
   },
   {
-    category: "Decentralized & Web3",
+    category: "Mobile & Civic Systems",
     items: [
-      { name: "Filebase (Decentralized Storage / IPFS)", level: "Expert" },
-      { name: "Solidity (Smart Contracts & EVM)", level: "Advanced" },
-      { name: "Ethers.js (Custodial Blockchain Services)", level: "Expert" },
-      { name: "AES-256 Client-Side Encryption", level: "Expert" },
-      { name: "Immutable Integrity Proofs & CIDs", level: "Expert" },
-      { name: "dApp Architecture & Integration", level: "Advanced" }
+      { name: "React Native & Expo SDK 57", level: "Expert" },
+      { name: "Expo Router (Navigation & Deep Links)", level: "Expert" },
+      { name: "Device Sensors (Pitch / Gyroscope)", level: "Expert" },
+      { name: "Leaflet GIS & React Native Maps", level: "Expert" },
+      { name: "Cryptographic SHA-256 Client Hashing", level: "Expert" },
+      { name: "Forensic Anti-Fraud Verification", level: "Expert" }
     ]
   },
   {
-    category: "Web & System Development",
+    category: "Cloud, Backend & Serverless",
     items: [
-      { name: "Full Stack Web Platforms", level: "Expert" },
-      { name: "Educational & Enterprise Systems", level: "Expert" },
-      { name: "Admin Dashboards & Portals", level: "Expert" },
+      { name: "Firebase (Firestore, Auth, Storage)", level: "Expert" },
+      { name: "Firebase Cloud Functions (Node.js 20)", level: "Expert" },
+      { name: "Node.js & Express Architecture", level: "Expert" },
+      { name: "MongoDB & Mongoose (Databases)", level: "Expert" },
       { name: "RESTful API Engineering", level: "Expert" },
-      { name: "Database Schema Design", level: "Expert" },
-      { name: "Authentication & Security (JWT)", level: "Advanced" }
+      { name: "Spatial Deduplication (<50m)", level: "Expert" }
+    ]
+  },
+  {
+    category: "Decentralized & Web3",
+    items: [
+      { name: "Filebase (IPFS / S3-Compatible Storage)", level: "Expert" },
+      { name: "AWS SigV4 Authentication Protocol", level: "Expert" },
+      { name: "Solidity (Smart Contracts & EVM)", level: "Advanced" },
+      { name: "Ethers.js (Custodial Blockchain Services)", level: "Expert" },
+      { name: "AES-256 Client-Side Encryption", level: "Expert" },
+      { name: "Immutable Integrity Proofs & CIDs", level: "Expert" }
     ]
   },
   {
     category: "Frontend & UI Engineering",
     items: [
-      { name: "React (Modern, Hooks, Context)", level: "Expert" },
-      { name: "JavaScript (ESNext) & TypeScript", level: "Advanced" },
-      { name: "Tailwind CSS & Modern CSS", level: "Expert" },
-      { name: "Framer Motion & Micro-interactions", level: "Advanced" },
-      { name: "Responsive UI/UX Layouts", level: "Expert" },
-      { name: "Performance & SEO Optimization", level: "Advanced" }
-    ]
-  },
-  {
-    category: "Backend & Database Core",
-    items: [
-      { name: "Node.js (Server Architecture)", level: "Expert" },
-      { name: "Express.js (Routing & Middleware)", level: "Expert" },
-      { name: "MongoDB & Mongoose (Databases)", level: "Expert" },
-      { name: "Git Version Control & GitHub", level: "Expert" },
-      { name: "API Testing (Postman)", level: "Advanced" },
-      { name: "Vercel / Cloud Deployment", level: "Advanced" }
+      { name: "React 18 & Vite Ecosystem", level: "Expert" },
+      { name: "TypeScript & JavaScript (ESNext)", level: "Expert" },
+      { name: "Leaflet GIS Spatial Mapping", level: "Expert" },
+      { name: "Vanilla CSS & Modern Design Systems", level: "Expert" },
+      { name: "Tailwind CSS & Framer Motion", level: "Expert" },
+      { name: "Responsive UI/UX Layouts", level: "Expert" }
     ]
   }
 ];
@@ -76,6 +76,52 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    title: "Bantay Kalsada: Civic Tech & Tamper-Proof Incident Platform",
+    category: "Systems",
+    description: "An end-to-end civic-technology platform built for Philippine municipalities to detect and resolve road hazards (potholes, missing manholes, road collapses, floods) with tamper-proof forensic verification. Citizens capture incidents via a React Native mobile app with device pitch sensor leveling (≥22°) and SHA-256 client-side cryptographic hashing. Firebase Cloud Functions orchestrate Google Gemini 2.5 Flash Multimodal Vision AI for automated severity scoring, spatial deduplication (<50m), and decentralized Filebase (IPFS) archival, while LGU engineers triage incidents and dispatch crews via a real-time GIS dashboard.",
+    tags: [
+      "React Native (Expo SDK 57)",
+      "React 18 & Vite",
+      "Google Gemini 2.5 Flash Vision",
+      "Firebase & Cloud Functions",
+      "Filebase (IPFS / AWS SigV4)",
+      "SHA-256 Cryptography",
+      "Leaflet GIS",
+      "TypeScript Monorepo"
+    ],
+    metrics: "Sensor pitch lock (≥22°) • Gemini 2.5 Flash AI scoring • <50m spatial deduplication",
+    github: "https://github.com",
+    live: "https://example.com",
+    featured: true,
+    architecture: [
+      {
+        title: "Citizen Mobile Client (React Native / Expo Router)",
+        desc: "Forensic anti-fraud camera, device gyroscope/pitch leveling lock (≥22°), SHA-256 client-side hashing, and real-time GPS geotagging on interactive maps."
+      },
+      {
+        title: "Firebase Cloud Functions & Serverless Engine",
+        desc: "Authoritative server-side orchestration handling onReportCreate/onStatusChange triggers, audit logs, and instant Expo push notifications to citizen devices."
+      },
+      {
+        title: "Google Gemini 2.5 Flash Multimodal Vision AI",
+        desc: "Automated road hazard severity scoring, recapture fraud detection, and spatial deduplication clustering within a 50-meter radius."
+      },
+      {
+        title: "Decentralized Archival (Filebase / IPFS)",
+        desc: "Tamper-proof evidence locker leveraging Filebase S3-compatible IPFS decentralized storage secured via AWS SigV4 authentication."
+      },
+      {
+        title: "LGU Operations Dashboard (React 18 / Vite)",
+        desc: "Live incident triage stream, Leaflet GIS spatial mapping, crew dispatch roster management, and mandatory before/after resolution proof enforcement."
+      },
+      {
+        title: "Monorepo Codebase Structure",
+        desc: "Clean modular architecture partitioned into mobile/ (Expo), dashboard/ (Vite), functions/ (Node.js 20 serverless), and shared/ (TypeScript contracts & schemas)."
+      }
+    ]
+  },
+  {
+    id: 2,
     title: "ReviewMate: AI & Blockchain Study Platform",
     category: "Systems",
     description: "An AI-powered, blockchain-secured educational web application designed to automate the creation of study reviewers, flashcards, and quizzes from lecture notes. Utilizes Google Gemini for high-speed NLP content processing, client-side AES-256 encryption, decentralized IPFS storage via Filebase, and a custodial server-side blockchain service using Ethers.js and Solidity smart contracts for immutable academic integrity assurance without requiring student crypto wallets.",
@@ -84,72 +130,6 @@ export const projects = [
     github: "https://github.com",
     live: "https://review-mate-ph.vercel.app/",
     featured: true
-  },
-  {
-    id: 2,
-    title: "Apex Enterprise Management System",
-    category: "Systems",
-    description: "A comprehensive business operations and resource management system featuring role-based access control, employee tracking, inventory management, and automated PDF reporting—crafted with React, Node.js, Express, and MongoDB with agentic scaffolding.",
-    tags: ["Full Stack System", "React", "Node.js", "Express", "MongoDB", "Gemini Antigravity"],
-    metrics: "Production-ready • Complete role-based security",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "PulseHub Analytics & Monitoring Portal",
-    category: "Websites",
-    description: "High-performance web dashboard delivering live telemetry visualization, dynamic interactive charts, and system status alerts. Designed with responsive dark-mode aesthetics and fluid animations.",
-    tags: ["Web Portal", "React", "Tailwind", "Framer Motion", "Codex", "REST API"],
-    metrics: "60 FPS rendering • 100% responsive",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: true
-  },
-  {
-    id: 4,
-    title: "Aura Commerce Storefront & CMS",
-    category: "Websites",
-    description: "A modern, full-featured web store with dynamic product filtering, seamless cart checkout, order tracking, and an integrated custom administrative content management system.",
-    tags: ["E-Commerce Web", "React", "Express", "MongoDB", "Claude 3.5", "Stripe"],
-    metrics: "Lightning fast checkout • Scalable product catalog",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: false
-  },
-  {
-    id: 5,
-    title: "OmniDesk Client Onboarding Portal",
-    category: "Systems",
-    description: "Automated client intake, identity verification, and document processing portal with real-time status updates, eliminating manual paperwork for service agencies.",
-    tags: ["Business System", "React", "Node.js", "Express", "MongoDB", "Gemini"],
-    metrics: "Cut client onboarding time by 70%",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "Nexus Team Workspace & Task Engine",
-    category: "Systems",
-    description: "Collaborative project and sprint management web application featuring drag-and-drop Kanban boards, team notifications, and automated audit logs.",
-    tags: ["Web App", "React", "Node.js", "Socket.io", "Codex", "Tailwind"],
-    metrics: "Sub-50ms real-time sync across clients",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: false
-  },
-  {
-    id: 7,
-    title: "Vanguard Corporate Showcase Website",
-    category: "Websites",
-    description: "Sophisticated corporate portfolio website with glassmorphism visual styling, smooth scroll narratives, dynamic contact validation, and top-tier SEO benchmarks.",
-    tags: ["Corporate Website", "React", "Modern CSS", "Framer Motion", "Claude"],
-    metrics: "99+ Lighthouse performance & SEO score",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: false
   }
 ];
 

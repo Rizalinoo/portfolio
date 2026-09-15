@@ -11,6 +11,8 @@ import {
   ReactLogo,
   NodeLogo,
   MongoLogo,
+  FirebaseLogo,
+  MobileLogo,
   getSkillLogo
 } from './TechLogos';
 
@@ -25,14 +27,16 @@ export default function Skills() {
 
   // Key showcase tools with visual logo badges
   const featuredToolchain = [
-    { name: 'Google Gemini', icon: <GeminiLogo size={20} />, label: 'AI Synthesis' },
+    { name: 'Google Gemini', icon: <GeminiLogo size={20} />, label: 'Multimodal AI' },
     { name: 'Claude 3.5', icon: <ClaudeLogo size={20} />, label: 'Architecture' },
-    { name: 'OpenAI Codex', icon: <CodexLogo size={20} />, label: 'Code Gen' },
+    { name: 'React Native', icon: <MobileLogo size={20} />, label: 'Mobile & Expo' },
+    { name: 'Firebase', icon: <FirebaseLogo size={20} />, label: 'Cloud & Functions' },
     { name: 'Solidity', icon: <SolidityLogo size={20} />, label: 'Smart Contracts' },
     { name: 'Filebase', icon: <FilebaseLogo size={20} />, label: 'Decentralized IPFS' },
-    { name: 'React', icon: <ReactLogo size={20} />, label: 'Frontend' },
+    { name: 'React', icon: <ReactLogo size={20} />, label: 'Frontend & GIS' },
     { name: 'Node.js', icon: <NodeLogo size={20} />, label: 'Backend API' },
     { name: 'MongoDB', icon: <MongoLogo size={20} />, label: 'Database' },
+    { name: 'OpenAI Codex', icon: <CodexLogo size={20} />, label: 'Code Gen' },
   ];
 
   return (
@@ -194,13 +198,13 @@ export default function Skills() {
         }
         @media (min-width: 640px) {
           .toolchain-showcase-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1rem;
           }
         }
         @media (min-width: 1024px) {
           .toolchain-showcase-grid {
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(10, 1fr);
           }
         }
         .toolchain-card {

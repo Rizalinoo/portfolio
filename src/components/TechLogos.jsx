@@ -131,6 +131,43 @@ export function ShieldLogo({ size = 18, className = '' }) {
   );
 }
 
+// Firebase Flame
+export function FirebaseLogo({ size = 18, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <path
+        d="M4.5 17.5L7.2 3.8C7.3 3.3 8 3.1 8.3 3.6L11.5 9.4L12.9 6.8C13.2 6.3 13.9 6.3 14.1 6.8L19.5 17.5C19.8 18.2 19.3 19 18.5 19H5.5C4.7 19 4.2 18.2 4.5 17.5Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M12 13V16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// Mobile / Smartphone
+export function MobileLogo({ size = 18, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="5" y="2" width="14" height="20" rx="3" />
+      <line x1="12" y1="18" x2="12.01" y2="18" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
+// Map / Leaflet GIS
+export function MapLogo({ size = 18, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+      <line x1="8" y1="2" x2="8" y2="18" />
+      <line x1="16" y1="6" x2="16" y2="22" />
+    </svg>
+  );
+}
+
 // Helper function to return the matching logo component for a skill name
 export function getSkillLogo(name, size = 16) {
   const lower = name.toLowerCase();
@@ -153,6 +190,15 @@ export function getSkillLogo(name, size = 16) {
   if (lower.includes('ethers') || lower.includes('blockchain') || lower.includes('dapp')) {
     return <EthereumLogo size={size} />;
   }
+  if (lower.includes('firebase')) {
+    return <FirebaseLogo size={size} />;
+  }
+  if (lower.includes('native') || lower.includes('expo') || lower.includes('mobile') || lower.includes('sensor') || lower.includes('gyro')) {
+    return <MobileLogo size={size} />;
+  }
+  if (lower.includes('leaflet') || lower.includes('map') || lower.includes('gis')) {
+    return <MapLogo size={size} />;
+  }
   if (lower.includes('react') || lower.includes('next')) {
     return <ReactLogo size={size} />;
   }
@@ -165,7 +211,7 @@ export function getSkillLogo(name, size = 16) {
   if (lower.includes('tailwind') || lower.includes('css') || lower.includes('framer')) {
     return <TailwindLogo size={size} />;
   }
-  if (lower.includes('aes') || lower.includes('security') || lower.includes('encryption')) {
+  if (lower.includes('sha') || lower.includes('crypto') || lower.includes('hash') || lower.includes('aes') || lower.includes('security') || lower.includes('encryption')) {
     return <ShieldLogo size={size} />;
   }
   return <CodeLogo size={size} />;
