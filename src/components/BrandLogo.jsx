@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function TerminalLogoBadge({ size = 34, className = '' }) {
+export function RLogoBadge({ size = 34, className = '' }) {
   return (
     <div
       className={className}
@@ -8,47 +8,39 @@ export function TerminalLogoBadge({ size = 34, className = '' }) {
         width: `${size}px`,
         height: `${size}px`,
         borderRadius: `${Math.round(size * 0.26)}px`,
-        backgroundColor: '#0f1013',
-        border: '1px solid rgba(255, 255, 255, 0.14)',
+        backgroundColor: 'rgba(17, 14, 28, 0.85)',
+        border: '1px solid rgba(134, 59, 255, 0.28)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
-        boxShadow: '0 2px 6px rgba(0, 0, 0, 0.35)',
+        boxShadow: '0 2px 10px rgba(134, 59, 255, 0.18)',
+        overflow: 'hidden',
+        padding: '3px',
       }}
     >
-      <svg
-        width={Math.round(size * 0.58)}
-        height={Math.round(size * 0.58)}
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.5 10L16 16L8.5 22"
-          stroke="#ffffff"
-          strokeWidth="2.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <line
-          x1="18.5"
-          y1="22"
-          x2="25"
-          y2="22"
-          stroke="#ffffff"
-          strokeWidth="2.8"
-          strokeLinecap="round"
-        />
-      </svg>
+      <img
+        src="/favicon.svg"
+        alt="R Logo"
+        width={Math.round(size * 0.72)}
+        height={Math.round(size * 0.72)}
+        style={{
+          display: 'block',
+          objectFit: 'contain',
+          filter: 'drop-shadow(0 1px 4px rgba(134, 59, 255, 0.35))',
+        }}
+      />
     </div>
   );
 }
 
+// Alias for seamless compatibility across Navbar and Footer
+export const TerminalLogoBadge = RLogoBadge;
+
 export function BrandLogo({ size = 34 }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-      <TerminalLogoBadge size={size} />
+      <RLogoBadge size={size} />
       <span
         style={{
           fontFamily: 'var(--font-mono)',
@@ -60,7 +52,7 @@ export function BrandLogo({ size = 34 }) {
           alignItems: 'center',
         }}
       >
-        rizalino<span style={{ color: '#71717a', fontWeight: 500 }}>.dev</span>
+        rizalino<span style={{ color: '#8e8e93', fontWeight: 500 }}>.dev</span>
       </span>
     </div>
   );
