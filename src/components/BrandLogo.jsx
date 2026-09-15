@@ -7,34 +7,34 @@ export function RLogoBadge({ size = 34, className = '' }) {
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        borderRadius: `${Math.round(size * 0.26)}px`,
-        backgroundColor: 'rgba(17, 14, 28, 0.85)',
-        border: '1px solid rgba(134, 59, 255, 0.28)',
+        borderRadius: `${Math.round(size * 0.24)}px`,
+        backgroundColor: '#000000',
+        border: '1px solid rgba(255, 255, 255, 0.16)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
-        boxShadow: '0 2px 10px rgba(134, 59, 255, 0.18)',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
         overflow: 'hidden',
-        padding: '3px',
       }}
     >
       <img
-        src="/favicon.svg"
+        src="/logo.png"
         alt="R Logo"
-        width={Math.round(size * 0.72)}
-        height={Math.round(size * 0.72)}
+        width={size}
+        height={size}
         style={{
+          width: '100%',
+          height: '100%',
           display: 'block',
-          objectFit: 'contain',
-          filter: 'drop-shadow(0 1px 4px rgba(134, 59, 255, 0.35))',
+          objectFit: 'cover',
         }}
       />
     </div>
   );
 }
 
-// Alias for seamless compatibility across Navbar and Footer
+// Alias for backwards compatibility across Navbar and Footer
 export const TerminalLogoBadge = RLogoBadge;
 
 export function BrandLogo({ size = 34 }) {
