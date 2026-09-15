@@ -4,7 +4,7 @@ export const personalInfo = {
   tagline: "Building high-quality websites, robust systems, and intelligent solutions powered by AI-driven development.",
   location: "Available for Projects & Remote Roles",
   email: "rizalino.dev@example.com",
-  github: "https://github.com",
+  github: "https://github.com/Rizalinoo",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
   bio: "I build modern websites, production systems, and intelligent web applications that deliver exceptional user experiences and dependable performance. My development workflow is AI-driven at its core — leveraging agentic AI tools for code generation, architecture review, and rapid iteration, allowing me to ship faster, maintain cleaner codebases, and craft polished digital solutions with uncompromising quality.",
@@ -90,8 +90,8 @@ export const projects = [
       "TypeScript Monorepo"
     ],
     metrics: "Sensor pitch lock (≥22°) • Gemini 2.5 Flash AI scoring • <50m spatial deduplication",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/Rizalinoo/BantayKalsada",
+    live: null,
     featured: true,
     architecture: [
       {

@@ -231,17 +231,19 @@ export default function Projects() {
                     >
                       <GithubIcon size={18} />
                     </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Live Demo"
-                      style={{ color: 'var(--text-med)' }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-med)')}
-                    >
-                      <ExternalLink size={18} />
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Live Demo"
+                        style={{ color: 'var(--text-med)' }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-med)')}
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -398,15 +400,17 @@ export default function Projects() {
                     <GithubIcon size={16} />
                     <span>View Repository</span>
                   </a>
-                  <a
-                    href={selectedProject.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary"
-                  >
-                    <span>Live Showcase</span>
-                    <ExternalLink size={16} />
-                  </a>
+                  {selectedProject.live && (
+                    <a
+                      href={selectedProject.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary"
+                    >
+                      <span>Live Showcase</span>
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </div>
