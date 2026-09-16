@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar } from 'lucide-react';
-import { experiences } from '../data/portfolioData';
+import { Briefcase, Compass, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -11,153 +10,116 @@ export default function Experience() {
         <div className="section-header">
           <div className="section-tag">
             <Briefcase size={13} />
-            <span>Career Progression</span>
+            <span>Career Path</span>
           </div>
-          <h2 className="section-title">Experience & impact.</h2>
+          <h2 className="section-title">Experience</h2>
           <p className="section-subtitle">
-            Leading engineering efforts, architecting platforms, and shipping systems that sustain enterprise workloads.
+            My professional journey building software at scale.
           </p>
         </div>
 
-        {/* Timeline Container */}
-        <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
-          {/* Vertical central subtle line */}
-          <div
-            className="timeline-vertical-line"
+        {/* Opportunity Card */}
+        <div style={{ maxWidth: '680px', margin: '0 auto' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="card-spotlight"
             style={{
-              position: 'absolute',
-              top: '1rem',
-              bottom: '1rem',
-              width: '1px',
-              background: 'linear-gradient(180deg, var(--border-bright), var(--border-subtle))',
+              padding: 'clamp(2rem, 5vw, 3rem)',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1.25rem',
+              position: 'relative',
+              overflow: 'hidden',
             }}
-          />
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-            {experiences.map((exp, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="timeline-entry"
-                style={{ position: 'relative' }}
+          >
+            {/* Status Beacon */}
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                padding: '0.4rem 1rem',
+                borderRadius: 'var(--radius-full)',
+                backgroundColor: 'rgba(34, 197, 94, 0.08)',
+                border: '1px solid rgba(34, 197, 94, 0.25)',
+              }}
+            >
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '8px',
+                  height: '8px',
+                  borderRadius: '50%',
+                  backgroundColor: '#22c55e',
+                  boxShadow: '0 0 10px rgba(34, 197, 94, 0.7)',
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.78rem',
+                  color: '#22c55e',
+                  fontWeight: 600,
+                  letterSpacing: '0.02em',
+                }}
               >
-                {/* Timeline node icon */}
-                <div
-                  className="timeline-node"
-                  style={{
-                    position: 'absolute',
-                    top: '6px',
-                    width: '17px',
-                    height: '17px',
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--bg-black)',
-                    border: '3px solid var(--text-pure)',
-                    boxShadow: '0 0 10px var(--accent-glow)',
-                  }}
-                />
+                Available for Hire
+              </span>
+            </div>
 
-                <div
-                  className="card-spotlight"
-                  style={{ padding: 'clamp(1.2rem, 3.5vw, 2rem)' }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      marginBottom: '0.6rem',
-                      gap: '0.5rem',
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontSize: 'clamp(1.1rem, 3vw, 1.25rem)',
-                        fontWeight: 700,
-                        color: 'var(--text-pure)',
-                        letterSpacing: '-0.02em',
-                      }}
-                    >
-                      {exp.role}
-                    </h3>
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.4rem',
-                        fontSize: '0.78rem',
-                        fontFamily: 'var(--font-mono)',
-                        color: 'var(--text-med)',
-                      }}
-                    >
-                      <Calendar size={13} />
-                      <span>{exp.period}</span>
-                    </div>
-                  </div>
+            {/* Main Statement */}
+            <h3
+              style={{
+                fontSize: 'clamp(1.25rem, 3.2vw, 1.65rem)',
+                fontWeight: 700,
+                color: 'var(--text-pure)',
+                letterSpacing: '-0.02em',
+                maxWidth: '520px',
+                lineHeight: 1.35,
+                margin: 0,
+              }}
+            >
+              Currently seeking new professional opportunities.
+            </h3>
 
-                  <div
-                    style={{
-                      fontSize: '0.92rem',
-                      fontWeight: 600,
-                      color: 'var(--text-med)',
-                      marginBottom: '0.85rem',
-                    }}
-                  >
-                    {exp.company}
-                  </div>
+            {/* Subtext */}
+            <p
+              style={{
+                color: 'var(--text-med)',
+                fontSize: '1rem',
+                lineHeight: 1.6,
+                maxWidth: '460px',
+                margin: 0,
+              }}
+            >
+              Check back later for updates.
+            </p>
 
-                  <p
-                    style={{
-                      color: 'var(--text-high)',
-                      fontSize: '0.9rem',
-                      lineHeight: '1.68',
-                      marginBottom: '1.25rem',
-                    }}
-                  >
-                    {exp.description}
-                  </p>
-
-                  {/* Tech stack used in this role */}
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                    {exp.technologies.map((t) => (
-                      <span key={t} className="tech-pill">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+            {/* Action Button */}
+            <div style={{ marginTop: '0.5rem' }}>
+              <a
+                href="#contact"
+                className="btn btn-primary"
+                style={{
+                  fontSize: '0.88rem',
+                  padding: '0.65rem 1.4rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                <span>Get in Touch</span>
+                <ArrowRight size={15} />
+              </a>
+            </div>
+          </motion.div>
         </div>
-
       </div>
-
-      <style>{`
-        .timeline-vertical-line {
-          left: 10px;
-        }
-        .timeline-node {
-          left: 2px;
-        }
-        .timeline-entry {
-          padding-left: 32px;
-        }
-        @media (min-width: 600px) {
-          .timeline-vertical-line {
-            left: 20px;
-          }
-          .timeline-node {
-            left: 12px;
-          }
-          .timeline-entry {
-            padding-left: 55px;
-          }
-        }
-      `}</style>
     </section>
   );
 }

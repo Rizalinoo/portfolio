@@ -132,27 +132,3 @@ export const projects = [
     featured: true
   }
 ];
-
-export const experiences = [
-  {
-    period: "2023 — Present",
-    role: "Full Stack Web & Systems Developer",
-    company: "Client Solutions & System Development",
-    description: "Architecting ReviewMate and full-stack web systems with an AI-driven development workflow. Leveraging agentic AI tools for rapid iteration, code generation, and architecture review. Delivering production-ready solutions using React, Node.js, and MongoDB while following Agile and Scrum methodologies to maintain velocity and code quality.",
-    technologies: ["React", "Node.js", "MongoDB", "Agentic AI Tools", "Ethers.js", "AES-256", "Agile", "Scrum"]
-  },
-  {
-    period: "2022 — 2023",
-    role: "Web Application Developer",
-    company: "Innovate Web Studio",
-    description: "Developed and shipped custom responsive websites and web application systems. Built REST APIs, implemented secure authentication workflows, and optimized database indexing for enterprise clients. Worked within Agile and Scrum teams to deliver iterative releases on schedule.",
-    technologies: ["React", "Express.js", "Node.js", "MongoDB", "Tailwind CSS", "REST APIs", "Agile", "Scrum"]
-  },
-  {
-    period: "2021 — 2022",
-    role: "Frontend & Website Developer",
-    company: "Digital Horizon Agency",
-    description: "Crafted modern web interfaces, customer-facing landing pages, and interactive client portals with strong attention to typography, responsive layouts, and cross-browser consistency.",
-    technologies: ["JavaScript", "React", "CSS3 / Modern UI", "Node.js", "Git"]
-  }
-];
