@@ -47,7 +47,7 @@ export default function Footer() {
               fontFamily: 'var(--font-mono)',
             }}
           >
-            © {new Date().getFullYear()} • Crafted with React & Framer Motion
+            © {new Date().getFullYear()} Rizalino De Guzman. All rights reserved.
           </div>
 
           {/* Back to top button */}
