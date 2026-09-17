@@ -248,7 +248,7 @@ export default function Hero() {
         }
         @media (min-width: 580px) {
           .hero-stats-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
           }
         }
         @media (max-width: 460px) {

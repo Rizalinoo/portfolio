@@ -9,7 +9,6 @@ export const personalInfo = {
   twitter: "https://twitter.com",
   bio: "I build modern websites, production systems, and intelligent web applications that deliver exceptional user experiences and dependable performance. My development workflow is AI-driven at its core — leveraging agentic AI tools for code generation, architecture review, and rapid iteration, allowing me to ship faster, maintain cleaner codebases, and craft polished digital solutions with uncompromising quality.",
   stats: [
-    { label: "Execution Speed", value: "10x" },
     { label: "Flagship Project", value: "ReviewMate" },
     { label: "AI Workflow", value: "Agentic Dev" }
   ]
@@ -130,5 +129,41 @@ export const projects = [
     github: "https://github.com",
     live: "https://review-mate-ph.vercel.app/",
     featured: true
+  },
+  {
+    id: 3,
+    title: "ServiFind: On-Demand Service Marketplace & Booking Platform",
+    category: "Systems",
+    description: "A full-stack service marketplace and booking platform connecting clients with verified local service professionals. Features an end-to-end booking engine with two-step completion verification, dispute resolution ticketing with evidence tracking, integrated cash and e-wallet payment flows with automated fee breakdown, and role-based access control (RBAC) governing admin, provider, and customer dashboards.",
+    tags: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+    metrics: "Two-step completion flow • Cash & e-Wallet billing • Multi-tier RBAC",
+    github: "https://github.com/Rizalinoo/ServiFind",
+    live: null,
+    featured: false,
+    architecture: [
+      {
+        title: "Stateful Booking Engine",
+        desc: "Complete booking lifecycle system supporting scheduling and a two-step completion flow to ensure service accountability."
+      },
+      {
+        title: "Integrated Payments",
+        desc: "Flexible payment processing supporting both Cash and e-Wallet integrations with automated fee breakdown."
+      },
+      {
+        title: "Dispute Resolution",
+        desc: "Dedicated ticketing module for conflict management with timeline tracking and evidence attachments."
+      },
+      {
+        title: "Role-Based Access Control (RBAC)",
+        desc: "Secure backend handling distinct profiles and dashboards for Admins, Users, and Providers."
+      }
+    ]
   }
 ];
