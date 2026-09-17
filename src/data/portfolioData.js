@@ -3,7 +3,7 @@ export const personalInfo = {
   role: "Full Stack Web & Systems Developer",
   tagline: "Building high-quality websites, robust systems, and intelligent solutions powered by AI-driven development.",
   location: "Available for Projects & Remote Roles",
-  email: "rizalino.dev@example.com",
+  email: "deguzmanrizalino30@gmail.com",
   github: "https://github.com/Rizalinoo",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",

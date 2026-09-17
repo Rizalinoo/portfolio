@@ -87,9 +87,21 @@ export default function Contact() {
                     PRIMARY EMAIL
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem', flexWrap: 'wrap' }}>
-                    <span style={{ fontSize: 'clamp(0.85rem, 2.8vw, 0.95rem)', fontWeight: 600, color: 'var(--text-pure)', wordBreak: 'break-all' }}>
+                    <a
+                      href={`mailto:${personalInfo.email}`}
+                      style={{
+                        fontSize: 'clamp(0.85rem, 2.8vw, 0.95rem)',
+                        fontWeight: 600,
+                        color: 'var(--text-pure)',
+                        wordBreak: 'break-all',
+                        textDecoration: 'none',
+                        transition: 'color 0.2s',
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#38bdf8')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-pure)')}
+                    >
                       {personalInfo.email}
-                    </span>
+                    </a>
                     <button
                       onClick={handleCopyEmail}
                       style={{

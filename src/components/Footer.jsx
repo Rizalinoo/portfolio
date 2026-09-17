@@ -39,15 +39,31 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center Copyright */}
+          {/* Center Copyright & Email */}
           <div
             style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.35rem',
               fontSize: '0.8rem',
               color: 'var(--text-low)',
               fontFamily: 'var(--font-mono)',
             }}
           >
-            © {new Date().getFullYear()} Rizalino De Guzman. All rights reserved.
+            <div>© {new Date().getFullYear()} Rizalino De Guzman. All rights reserved.</div>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              style={{
+                color: 'var(--text-med)',
+                textDecoration: 'none',
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text-pure)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-med)')}
+            >
+              {personalInfo.email}
+            </a>
           </div>
 
           {/* Back to top button */}
